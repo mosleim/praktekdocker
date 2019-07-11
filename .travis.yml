@@ -2,9 +2,10 @@ language: generic
 sudo: required
 services:
   - docker
-
+env:
+  - CI=true
 before_install:
   - docker build -t mosleim/praktekdocker -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true  mosleim/praktekdocker CI=true npm run test
+  - docker run  mosleim/praktekdocker CI=true npm run test
