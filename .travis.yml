@@ -8,4 +8,4 @@ before_install:
   - docker build -t mosleim/praktekdocker -f Dockerfile.dev .
 
 script:
-  - docker run  mosleim/praktekdocker CI=true npm run test
+  - docker run  mosleim/praktekdocker npm run test
