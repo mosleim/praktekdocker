@@ -9,7 +9,7 @@ script:
   - docker run -e CI=true  mosleim/praktekdocker npm run test
 
 deploy:
-  provider: elastickbeanstalk
+  provider: elasticbeanstalk
   region: "ap-southeast-1"
   app: "praktekdocker"
   env: "Praktekdocker-env"
